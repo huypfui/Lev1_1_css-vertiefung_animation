@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#pink {
+    background-color: palevioletred;
+}
+
+#yellow {
+    background-color: #FBFF78 ;
+}
+
+#green {
+    background-color: #80FFBA;
+}
+
+#green .arrowUp {
+    padding-top: 5vh;
+}
+
+section a {
+    text-decoration: none;
+}
+
+.arrow {
+    /* Benennung der Animation */
+    animation-name: wiggle;
+
+    /* Dauer der Animation */
+    animation-duration: 1000ms;
+
+    /* Wie oft soll die Animation durchgeführt werden */
+    animation-iteration-count: infinite;
+
+    /* Geschwindigkeit */
+    animation-timing-function: linear;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(50px);
+        opacity: 10%;
+    }
+}
+
+.arrowUp {
+    /* Benennung der Animation */
+    animation-name: wiggleUp;
+
+    /* Dauer der Animation */
+    animation-duration: 1000ms;
+
+    /* Wie oft soll die Animation durchgeführt werden */
+    animation-iteration-count: infinite;
+
+    /* Geschwindigkeit */
+    animation-timing-function: linear;
+}
+
+@keyframes wiggleUp {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+        opacity: 10%;
+    }
+}
